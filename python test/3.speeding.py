@@ -23,7 +23,7 @@ Example Test Cases:
 5. speeding_ticket(85, True) should return "Small Ticket".
 """
 
-
+# 接受生日还有 speed；一个int 一个boolean ，判断罚款
 def speeding_ticket(speed, is_birthday): 
     if is_birthday == False: 
        if speed <=60: 
@@ -40,9 +40,7 @@ def speeding_ticket(speed, is_birthday):
         elif speed>=86: 
            print("Big Ticket") 
         
-    # Your code goes here
-    # Implement the logic based on the driver's speed and birthday condition
-     # Delete this after implementing some code inside this function
+
 
 
 # Test cases

@@ -21,14 +21,13 @@ Example Test Cases:
 3. compound_interest_calculator(1500, 0.03, 6, 7) should calculate the amount.
 """
 
-
+# 需要计算浮点数amount，返回一个string
 def compound_interest_calculator(P, r, n, t): 
-    A= (P*(1+r/n)**(n*t))
+    A= (P*(1+r/n)**(n*t)) 
+# 浮点数需要转换成string 再加入到最后的string中进行返回
     Sentence=str(A)+" after "+str(t)+" years"
     return Sentence
-    # Your code goes here
-    # Implement the compound interest calculation
-    # Delete this after implementing some code inside this function
+   
 
 
 # Test cases

@@ -22,7 +22,7 @@ Example Test Cases:
 3. morse_translator("Morse Code") should return the Morse code for the given string.
 """
 
-
+# 接受string 返回摩尔斯码string
 def morse_translator(text):
     # Morse code mapping
     morse_code_dict = {
@@ -54,13 +54,16 @@ def morse_translator(text):
         "Z": "--..",
     }  
      
-    
-    original_string = text
-    uppercased_string = original_string.upper()  
-    list_text=list(uppercased_string)
+    # 先把接受到的输入string text 定义成新string 
+    original_string = text   
+    #  upper()方法让字符串升序，返回一个字符串
+    uppercased_string = original_string.upper() 
+    # list()方法转换字符串为列表(会把每个字符串的元素存入列表变成新元素，如果想分割就用split生成list)
+    list_text=list(uppercased_string) 
 
-    
-    final_morse=""
+    # 定义一个空字符串，准备操作该字符串后返回
+    final_morse="" 
+    # 对列表进行循环配对后添加字典的值进入finial_morse
     for element in list_text:
         if element in morse_code_dict:
             final_morse+=morse_code_dict[element]+" " 
@@ -73,10 +76,7 @@ def morse_translator(text):
     
         
 
-    # Your code goes here
-    # Remember to consider both upper and lower case letters, and spaces
-    # The function should return the translated Morse code string
-
+ 
 
 # Test cases
 print(morse_translator("HELLO WORLD"))  # Expected output: ".... . .-.. .-.. --- / .-- --- .-. .-.. -.." 

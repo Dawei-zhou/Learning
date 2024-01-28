@@ -30,7 +30,8 @@ def date_passed(todays_date, scheduled_date):
     scheduled=scheduled_date.split(" ")
     Month_info={"January":1,"February":2,"March":3,"April":4,"May":5,"June":6,"July":7,"August":8,"September":9,"October":10,"November":11,"December":12}  
     today_month=0 
-    scheduled_month=0 
+    scheduled_month=0  
+    # 判断月份是否相同
     for element in today : 
         if element in Month_info:  
             today_month=int(Month_info.get(element)) 
@@ -41,11 +42,15 @@ def date_passed(todays_date, scheduled_date):
         print("Scheduled date has passed") 
     elif today_month<scheduled_month: 
         print("Scheduled date is yet to pass") 
-    elif today_month==scheduled_month:  
+    # 月份相同的情况再比较具体日期是否相同
+    elif today_month==scheduled_month:   
+    # 正则表达式从string中提取出日期的具体数字进行比较
         a=re.findall("\d+", todays_date)
-        b=re.findall("\d+", scheduled_date)
+        b=re.findall("\d+", scheduled_date) 
+    # 把提取到的数字string 转换成int string 才可以比较大小
         int_today= int(a[0])
-        int_scheduled= int(b[0])
+        int_scheduled= int(b[0]) 
+    # 年份相同情况下 具体日期的3种不同情况
         if int_today==int_scheduled:  
             print("Scheduled date is today")  
         elif int_today<int_scheduled: 

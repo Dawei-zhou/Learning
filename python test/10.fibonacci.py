@@ -21,31 +21,33 @@ Example Test Cases:
 
 
 def fibonacci_sequence(max_value):  
-     final_number=0 
-     list_data=[0,1] 
-     i=0 
-     a=0  
+     list_data=[0,1]  
+     # 三种情况
      if max_value<0: 
           return "Empty list or error message" 
-     elif max_value==0: 
+     elif max_value==0:  
+          # 移除索引是1的元素
           list_data.pop(1) 
-          return list_data
-     while final_number< max_value: 
+          return list_data 
+     # 定义变量
+     final_number=0 
+     i=0 
+     a=0  
+     # 当前列表的最大数不大于给定的最大数 
+     while final_number< max_value:  
+     # 生成一个新的数加入列表中，新的数等于列表最后两位数之和
           final_number=list_data[a]+list_data[a+1] 
-          a+=1  
+          a+=1 
+          # 新的数大于的话给定值的话就返回当前的list，否则加入原来的list中
           if final_number>max_value:   
                return list_data
-               break
           else:
                list_data.append(final_number)  
-
+     # 返回列表 list_data
      return list_data
 
 
          
-    # Your code goes here
-    # Implement the Fibonacci sequence calculation using a while loop
-   # Delete this after implementing some code inside this function
 
 
 # Test cases

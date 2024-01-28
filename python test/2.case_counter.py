@@ -19,17 +19,15 @@ Example Test Cases:
 4. case_counter("1234!@#$") should print 0 for both counts.
 """
 
-
-def case_counter(text): 
+# 找字符串中大小写元素的数量
+def case_counter(text):  
+    # sum后面返回值是True or false， True 的话 sum 会加 1 ，false 不加；sum返回的是int
     count_lower = sum(c.islower() for c in text)
     count_upper = sum(c.isupper() for c in text)
-
+    # 如果打印的是字符串，不能直接加入int，需要每部分都是string类型，需要加转换
     print("Uppercase letters: " + str(count_upper)+" Lowercase letters: " + str(count_lower))
     
 
-    # Your code goes here
-    # Remember to count uppercase and lowercase letters and ignore non-alphabetic characters
-      # Delete this after implementing some code inside this function.
 
 
 # Test cases

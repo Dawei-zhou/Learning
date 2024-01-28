@@ -21,11 +21,13 @@ Example Test Cases:
 
 
 def calculate_factorial(number): 
+    # 三种情况；小于0时，等于0；大于0
     if number<0: 
         return "Error message or specific value" 
     elif number==0: 
         return "1" 
-    else: 
+    else:  
+        # 大于0时用循环做阶乘
         total=1
         for i in range(1,number+1):    
             total=total*i 
@@ -33,9 +35,6 @@ def calculate_factorial(number):
     
 
 
-    # Your code goes here
-    # Implement the factorial calculation using a for loop
-    # Delete this after implementing some code inside this function
 
 
 # Test cases

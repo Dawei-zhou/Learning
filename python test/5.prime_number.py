@@ -21,27 +21,28 @@ Example Test Cases:
 """
 
 
-def is_prime(number):  
+def is_prime(number): 
+    # 三种情况 
+    # 1  
     prime = False
     if number<2: 
-        prime=False 
+        prime=False  
+    # 2
     elif number==2: 
-        prime=True
-    else:
+        prime=True 
+    # 3
+    else: 
+        # 每个数从2开始除，一直除到本身-1，避免除数是1或本身
         for i in range(2,number): 
             if number%i!=0: 
-                prime =True 
+                prime =True  
+                # break 跳出循环
                 break
             elif number%i==0: 
                 return prime
     return prime
                  
-    
-    
-    # Your code goes here
-    # Implement the logic to determine if the number is prime
-    # Return True if the number is prime, False otherwise
-    # Delete this after implementing some code inside this function
+
 
 
 # Test cases
