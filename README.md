@@ -1,2 +1,2 @@
-# exercise
-exercise to create a new repository
+# Learning experience about programing
+
